@@ -48,3 +48,16 @@ prisma/*.db
 prisma/*.db-journal
 /public/uploads/*
 !.gitkeep
+
+# Electron build output
+/dist
+/dist-electron
+*.exe
+*.dmg
+*.AppImage
+*.snap
+*.deb
+*.rpm
+
+# Electron cache
+.electron-builder-cache/

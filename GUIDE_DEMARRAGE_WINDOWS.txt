@@ -1,0 +1,194 @@
+╔══════════════════════════════════════════════════════════════╗
+║        GUIDE DE DÉMARRAGE - GESTION DE STOCKS               ║
+║                    Windows 7/8/10/11                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════════════
+  DÉMARRAGE NORMAL
+═══════════════════════════════════════════════════════════════
+
+1. Double-cliquez sur le fichier: Demarrer-Windows.bat
+
+2. Si Windows affiche un avertissement de sécurité:
+   - Cliquez sur "Plus d'informations"
+   - Puis cliquez sur "Exécuter quand même"
+
+3. Le script va:
+   ✓ Vérifier que Node.js est installé
+   ✓ Installer les dépendances (première fois seulement)
+   ✓ Configurer la base de données
+   ✓ Ouvrir l'application dans votre navigateur
+
+4. L'application s'ouvrira automatiquement sur:
+   http://localhost:3000
+
+
+═══════════════════════════════════════════════════════════════
+  PROBLÈMES FRÉQUENTS ET SOLUTIONS
+═══════════════════════════════════════════════════════════════
+
+PROBLÈME 1: "Node.js n'est pas installé"
+─────────────────────────────────────────────────────────────
+Solution:
+1. Téléchargez Node.js depuis: https://nodejs.org
+2. Choisissez la version LTS (recommandée)
+3. Installez avec les options par défaut
+4. REDÉMARREZ votre ordinateur
+5. Relancez Demarrer-Windows.bat
+
+
+PROBLÈME 2: "npm n'est pas disponible"
+─────────────────────────────────────────────────────────────
+Solution:
+1. Réinstallez Node.js depuis: https://nodejs.org
+2. Pendant l'installation, assurez-vous que la case
+   "Add to PATH" est cochée
+3. Redémarrez votre ordinateur
+4. Relancez Demarrer-Windows.bat
+
+
+PROBLÈME 3: Erreur lors de l'installation des dépendances
+─────────────────────────────────────────────────────────────
+Solution:
+1. Vérifiez votre connexion Internet
+2. Clic droit sur Demarrer-Windows.bat
+3. Choisissez "Exécuter en tant qu'administrateur"
+4. Si l'erreur persiste:
+   - Supprimez le dossier "node_modules"
+   - Relancez le script
+
+
+PROBLÈME 4: Le navigateur ne s'ouvre pas automatiquement
+─────────────────────────────────────────────────────────────
+Solution:
+1. Ouvrez manuellement votre navigateur
+2. Tapez dans la barre d'adresse: http://localhost:3000
+3. Le script doit rester ouvert en arrière-plan
+
+
+PROBLÈME 5: "Le port 3000 est déjà utilisé"
+─────────────────────────────────────────────────────────────
+Solution:
+1. Fermez toutes les fenêtres de terminal/cmd
+2. Redémarrez votre ordinateur
+3. Relancez le script
+OU
+1. Ouvrez le Gestionnaire des tâches (Ctrl+Shift+Echap)
+2. Cherchez "Node.js" dans les processus
+3. Terminez tous les processus Node.js
+4. Relancez le script
+
+
+PROBLÈME 6: Page blanche ou erreur 404
+─────────────────────────────────────────────────────────────
+Solution:
+1. Fermez la fenêtre du terminal
+2. Supprimez le dossier ".next" (s'il existe)
+3. Relancez Demarrer-Windows.bat
+
+
+PROBLÈME 7: Antivirus bloque le script
+─────────────────────────────────────────────────────────────
+Solution:
+1. Ajoutez le dossier de l'application aux exceptions
+   de votre antivirus
+2. Ou désactivez temporairement l'antivirus
+3. Relancez le script
+
+
+═══════════════════════════════════════════════════════════════
+  DÉMARRAGE MANUEL (SI LE SCRIPT NE FONCTIONNE PAS)
+═══════════════════════════════════════════════════════════════
+
+1. Ouvrez une invite de commande (cmd):
+   - Appuyez sur Windows + R
+   - Tapez "cmd" et appuyez sur Entrée
+
+2. Naviguez vers le dossier de l'application:
+   cd "C:\Chemin\vers\gestion_de_stocks"
+
+3. Installez les dépendances (première fois seulement):
+   npm install
+
+4. Démarrez l'application:
+   npm run dev
+
+5. Ouvrez votre navigateur et allez sur:
+   http://localhost:3000
+
+
+═══════════════════════════════════════════════════════════════
+  ARRÊTER L'APPLICATION
+═══════════════════════════════════════════════════════════════
+
+1. Dans la fenêtre du terminal/cmd qui est ouverte:
+   - Appuyez sur Ctrl + C
+   - Confirmez avec "O" (Oui) si demandé
+
+2. Fermez ensuite la fenêtre
+
+
+═══════════════════════════════════════════════════════════════
+  CONFIGURATION MINIMALE REQUISE
+═══════════════════════════════════════════════════════════════
+
+✓ Système d'exploitation: Windows 7 SP1 ou supérieur
+✓ Node.js: Version 18.17 ou supérieur (LTS recommandée)
+✓ RAM: Minimum 4 GB
+✓ Espace disque: Minimum 500 MB libre
+✓ Navigateur: Chrome, Firefox, Edge (version récente)
+
+
+═══════════════════════════════════════════════════════════════
+  COMMANDES UTILES
+═══════════════════════════════════════════════════════════════
+
+Vérifier la version de Node.js:
+  node --version
+
+Vérifier la version de npm:
+  npm --version
+
+Nettoyer le cache de npm:
+  npm cache clean --force
+
+Réinstaller les dépendances:
+  1. Supprimez le dossier "node_modules"
+  2. npm install
+
+
+═══════════════════════════════════════════════════════════════
+  CONTACT SUPPORT
+═══════════════════════════════════════════════════════════════
+
+Si aucune des solutions ci-dessus ne fonctionne:
+
+1. Faites une capture d'écran du message d'erreur complet
+2. Notez:
+   - Votre version de Windows
+   - La version de Node.js (node --version)
+   - Le message d'erreur exact
+3. Contactez le support technique
+
+
+═══════════════════════════════════════════════════════════════
+  NOTES IMPORTANTES
+═══════════════════════════════════════════════════════════════
+
+⚠️  NE FERMEZ PAS la fenêtre du terminal tant que vous
+   utilisez l'application
+
+⚠️  Assurez-vous d'avoir une connexion Internet stable
+   lors de la première installation
+
+⚠️  L'installation des dépendances peut prendre 5-10 minutes
+   la première fois
+
+✓  Une fois installée, l'application démarre en 10-20 secondes
+
+✓  Les données sont sauvegardées localement dans un fichier
+   "dev.db" dans le dossier "prisma"
+
+
+Dernière mise à jour: Novembre 2024
+Version du script: 2.0

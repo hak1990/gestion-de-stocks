@@ -1,0 +1,16 @@
+# Variables d'environnement à copier-coller dans Vercel
+# NE PAS COMMIT CE FICHIER !
+
+# Variable 1
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_ZGVzdGluZWQtcHVwLTcwLmNsZXJrLmFjY291bnRzLmRldiQ
+
+# Variable 2
+CLERK_SECRET_KEY=sk_test_V3X8gNcZ9K3MaKysKKEEMIsiFSixgsfzTwOeqwbq6n
+
+# Variable 3
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+
+# Variable 4
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+# Variable 5 (DATABASE_URL sera ajoutée automatiquement par Vercel Postgres)
