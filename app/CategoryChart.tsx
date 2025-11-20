@@ -50,7 +50,8 @@ const CategoryChart = ({ email }: Props) => {
     }, [email]);
 
     // Tooltip personnalisé
-    const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ value: number; payload: { name: string } }> }) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const CustomTooltip = ({ active, payload }: any) => {
         if (active && payload && payload.length) {
             return (
                 <div className="bg-base-100 border-2 border-primary/30 rounded-xl p-4 shadow-xl">
@@ -68,7 +69,8 @@ const CategoryChart = ({ email }: Props) => {
     };
 
     // Label personnalisé pour afficher la valeur au-dessus des barres
-    const renderCustomLabel = (props: { x?: number; y?: number; width?: number; value?: number }) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const renderCustomLabel = (props: any) => {
         const { x, y, width, value } = props;
         if (x === undefined || y === undefined || width === undefined || value === undefined) return null;
         return (
