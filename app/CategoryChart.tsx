@@ -68,8 +68,9 @@ const CategoryChart = ({ email }: Props) => {
     };
 
     // Label personnalisé pour afficher la valeur au-dessus des barres
-    const renderCustomLabel = (props: { x: number; y: number; width: number; value: number }) => {
+    const renderCustomLabel = (props: { x?: number; y?: number; width?: number; value?: number }) => {
         const { x, y, width, value } = props;
+        if (x === undefined || y === undefined || width === undefined || value === undefined) return null;
         return (
             <text
                 x={x + width / 2}
