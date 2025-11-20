@@ -8,7 +8,6 @@ import {
     XAxis,
     YAxis,
     Tooltip,
-    Legend,
     Bar,
     Cell,
     LabelList
@@ -45,19 +44,13 @@ const CategoryChart = ({ email }: Props) => {
         }
     };
 
-    function formatNumber(value: number): string {
-        if (value >= 1_000_000) return (value / 1_000_000).toFixed(1) + "M";
-        if (value >= 1_000) return (value / 1_000).toFixed(1) + "k";
-        return value.toString();
-    }
-
     useEffect(() => {
         if (email) fetchStats();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [email]);
 
     // Tooltip personnalisé
-    const CustomTooltip = ({ active, payload }: any) => {
+    const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ value: number; payload: { name: string } }> }) => {
         if (active && payload && payload.length) {
             return (
                 <div className="bg-base-100 border-2 border-primary/30 rounded-xl p-4 shadow-xl">
@@ -75,7 +68,7 @@ const CategoryChart = ({ email }: Props) => {
     };
 
     // Label personnalisé pour afficher la valeur au-dessus des barres
-    const renderCustomLabel = (props: any) => {
+    const renderCustomLabel = (props: { x: number; y: number; width: number; value: number }) => {
         const { x, y, width, value } = props;
         return (
             <text
